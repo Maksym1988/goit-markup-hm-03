@@ -1,0 +1,174 @@
+:root {
+  --text: #434455;
+  --dark: #2e2f42;
+  --primary-brand: #4d5ae5;
+  --pressed-state: #404bbf;
+  --light: #f4f4fd;
+  --accent: #e7e9fc;
+  --success: #31d0aa;
+  --subtle-text: #8e8f99;
+  --white: #ffffff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  background-color: var(--white);
+  color: var(--text);
+}
+
+/* ---------------- Header --------------- */
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.accent {
+  color: var(--primary-brand);
+}
+
+/* ---------------- Site nav ---------------- */
+
+.site-nav .link {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus,
+.site-nav .link.current {
+  color: var(--pressed-state);
+}
+
+/* ---------------- Contacts ---------------- */
+
+.contacts-nav {
+  font-style: normal;
+}
+
+.contacts .link {
+  color: var(--text);
+}
+
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--pressed-state);
+}
+
+/* ---------------- Hero ---------------- */
+
+.hero {
+  background-color: var(--dark);
+}
+
+.hero-title {
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  color: var(--white);
+}
+
+.btn-hero {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  background-color: var(--primary-brand);
+  color: var(--white);
+}
+
+.btn-hero:hover,
+.btn-hero:focus {
+  background-color: var(--pressed-state);
+}
+
+/* ---------------- Section ---------------- */
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.part-title-works,
+.part-title-team {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  color: var(--dark);
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--dark);
+}
+
+.part-team {
+  background-color: var(--light);
+}
+
+.item-team,
+.item-project {
+  background-color: var(--white);
+}
+
+/* ---------------- Filters ---------------- */
+
+.btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: var(--primary-brand);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--pressed-state);
+  color: var(--white);
+}
+
+/* ---------------- Footer ---------------- */
+
+.site-footer {
+  background-color: var(--dark);
+}
+
+.title-footer {
+  color: var(--light);
+}
+
+.text-footer {
+  color: var(--accent);
+}
