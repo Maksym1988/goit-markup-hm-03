@@ -19,10 +19,57 @@ body {
   color: var(--text);
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: auto;
+
+  outline: 2px solid red;
+}
+
 /* ---------------- Header --------------- */
 
-.list {
-  list-style: none;
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--accent);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
 .link {
@@ -46,14 +93,31 @@ body {
 
 /* ---------------- Site nav ---------------- */
 
-.site-nav .link {
+.header-logo {
+  margin-right: 76px;
+}
+
+.site-nav {
+  margin-right: auto;
+}
+
+.list-nav {
+  gap: 40px;
+}
+
+.site-nav,
+.list-nav {
+  display: flex;
+}
+
+.list-nav .link {
   font-weight: 500;
   color: var(--dark);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link.current {
+.list-nav .link:hover,
+.list-nav .link:focus,
+.list-nav .link.current {
   color: var(--pressed-state);
 }
 
@@ -61,6 +125,11 @@ body {
 
 .contacts-nav {
   font-style: normal;
+}
+
+.contacts {
+  display: flex;
+  gap: 40px;
 }
 
 .contacts .link {
@@ -72,36 +141,12 @@ body {
   color: var(--pressed-state);
 }
 
-/* ---------------- Hero ---------------- */
-
-.hero {
-  background-color: var(--dark);
-}
-
-.hero-title {
-  font-size: 56px;
-  line-height: 1.07;
-  text-align: center;
-  color: var(--white);
-}
-
-.btn-hero {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  background-color: var(--primary-brand);
-  color: var(--white);
-}
-
-.btn-hero:hover,
-.btn-hero:focus {
-  background-color: var(--pressed-state);
-}
-
 /* ---------------- Section ---------------- */
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 
 .visually-hidden {
   position: absolute;
@@ -116,12 +161,18 @@ body {
   margin: -1px;
 }
 
-.part-title-works,
-.part-title-team {
+.works-title,
+.team-title {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   color: var(--dark);
+  margin-bottom: 72px;
+}
+
+.list {
+  display: flex;
+  gap: 24px;
 }
 
 .title {
@@ -129,10 +180,7 @@ body {
   font-size: 20px;
   line-height: 1.2;
   color: var(--dark);
-}
-
-.part-team {
-  background-color: var(--light);
+  margin-bottom: 8px;
 }
 
 .item-team,
@@ -140,29 +188,101 @@ body {
   background-color: var(--white);
 }
 
-/* ---------------- Filters ---------------- */
+/* ---------------- Hero ---------------- */
+
+.hero {
+  text-align: center;
+  background-color: var(--dark);
+  padding: 188px 0;
+}
+
+.hero-title {
+  font-size: 56px;
+  line-height: 1.07;
+  color: var(--white);
+  margin-bottom: 48px;
+}
+
+.container-hero {
+  max-width: 494px;
+  margin: auto;
+}
+
+.btn-hero {
+  background-color: var(--primary-brand);
+  color: var(--white);
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-style: none;
+}
+
+.btn-hero:hover,
+.btn-hero:focus {
+  background-color: var(--pressed-state);
+}
+
+/* ----------------- About ----------------- */
+
+.about {
+  padding-top: 120px;
+}
+
+.about-item {
+  max-width: 264px;
+}
+
+/* ----------------- Works ----------------- */
+
+.works-item {
+  background-blend-mode: soft-light, normal;
+  border: 1px solid var(--accent);
+}
+
+/* ----------------- Team ------------------ */
+
+.team {
+  background-color: var(--light);
+}
+
+/* ---------------- Filter ----------------- */
+
+.list-filter {
+  padding-top: 96px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
 
 .btn {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  cursor: pointer;
   background-color: var(--accent);
   color: var(--primary-brand);
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 12px 24px;
 }
 
 .btn:hover,
 .btn:focus {
   background-color: var(--pressed-state);
   color: var(--white);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* ---------------- Footer ---------------- */
+/* ---------------- Project----------------- */
+
+.list-project {
+  margin-top: 72px;
+  padding-bottom: 120px;
+}
+
+/* ---------------- Footer ----------------- */
 
 .site-footer {
   background-color: var(--dark);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .title-footer {
@@ -171,4 +291,6 @@ body {
 
 .text-footer {
   color: var(--accent);
+  max-width: 264px;
+  margin-top: 16px;
 }
