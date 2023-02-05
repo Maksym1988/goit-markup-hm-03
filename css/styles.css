@@ -261,7 +261,6 @@ img {
 /* ---------------- FILTER ----------------- */
 
 .list-filter {
-  padding-top: 96px;
   display: flex;
   gap: 24px;
   justify-content: center;
@@ -285,9 +284,13 @@ img {
 
 /* ---------------- PROJECT----------------- */
 
+.project {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
 .list-project {
   margin-top: 72px;
-  padding-bottom: 120px;
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
